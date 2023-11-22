@@ -1,25 +1,27 @@
-package com.example.demo.menu;
+package com.example.demo.option;
 
-import com.example.demo.option.Option;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Getter
 @Setter
-public class Menu {
+@Getter
+
+public class Option {
+
 	@Id
-	@GeneratedValue(strategy =GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String title;
-	//private int option_id;
+	private String price;
+	private String description;
+	//menu_id int 
 	//@ManyToMany
-	//private Option option;
-			
-
+	//private Menu menu;
+	
 }
