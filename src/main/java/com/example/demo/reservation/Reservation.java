@@ -2,10 +2,12 @@ package com.example.demo.reservation;
 
 import java.util.Date;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Email;
 import lombok.Getter;
 import lombok.Setter;
 @Entity
@@ -22,6 +24,8 @@ public class Reservation {
 	private String lastName;
 	private String firstName;
 	private String phone;
+	@Column(unique=true)
+	@Email
 	private String email;
 			
 }

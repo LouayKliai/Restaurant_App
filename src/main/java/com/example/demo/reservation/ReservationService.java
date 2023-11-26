@@ -1,5 +1,19 @@
 package com.example.demo.reservation;
 
-public interface ReservationService {
+import java.util.Date;
+import java.util.List;
 
+public interface ReservationService {
+	Reservation findReservationById(int reservation_id);
+	List<Reservation> findReservationByDate(Date reservation_date);
+	List<Reservation> findReservationByTime(Date reservation_time);
+	List<Reservation> findReservationByFirstName(String reservation_firstName);
+	List<Reservation> findReservationByLastName(String reservation_lastName);
+	Reservation findReservationByPhone(String reservation_phone);
+	Reservation findReservationByEmail(String reservation_email);
+	List<Reservation> findReservationByAllergy(boolean reservation_allergy);
+	Reservation findReservationByClientNumber(int reservation_clientNumber);
+	void deleteAllReservation();
+	void deleteReservationById(int reservation_id);
+	Reservation createReservation(Reservation reservation);
 }
